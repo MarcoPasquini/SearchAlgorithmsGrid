@@ -1,0 +1,77 @@
+.grid {
+  border: 1px solid #ccc;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  width: 25px;
+  height: 25px;
+  border: 1px solid #eee;
+  background-color: white;
+}
+
+.wall {
+  background-color: #727272;
+}
+
+.visited {
+  background-color: #7fc6ff;
+}
+.visitedEnd {
+  background-color: #ffc061;
+}
+.border {
+  background-color: #2fa1ff;
+}
+.borderEnd {
+  background-color: #ffa216;
+}
+.start {
+  background-color: #66bb6a;
+}
+
+.end {
+  background-color: #e57373;
+}
+
+.path {
+  background-color: #9574dc;
+}
+.instruction-text {
+  text-align: center;
+  font-size: 18px;
+}
+.preparation-menu {
+  padding-bottom: 10px;
+  display: flex;
+  width: 70%;
+  margin: 0 auto;
+}
+.mat-mdc-button:not(:disabled) {
+  flex: 1;
+  margin: 0 5px;
+  font-size: 1.1em;
+  border: 1px solid rgba(0, 0, 0, 0.288);
+}
+.start-menu {
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  width: 30%;
+}
+
+@media (max-width: 1024px) {
+  .preparation-menu {
+    width: 100%;
+  }
+}
+@media (max-width: 550px) {
+  .mat-mdc-button:not(:disabled) {
+    padding: 32px;
+  }
+}

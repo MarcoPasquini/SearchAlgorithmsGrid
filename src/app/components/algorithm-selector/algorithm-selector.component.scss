@@ -1,0 +1,57 @@
+h1 {
+  text-align: center;
+  font-size: 1.7em;
+  margin-top: 12px;
+}
+.app-container {
+  width: 75%;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .app-container {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+.choose-algorithm-type {
+  width: 100%;
+  display: flex;
+}
+.algorithm-type,
+.algorithm-option {
+  width: 50%;
+  float: left;
+  font-size: 18px;
+}
+mat-button-toggle.mat-button-toggle-checked {
+  color: var(--purple);
+  font-weight: 500;
+  background-color: rgb(241, 241, 241);
+}
+.algorithm-option.mat-button-toggle-checked {
+  color: var(--purple);
+  font-weight: 500;
+  background-color: rgba(255, 255, 255, 0.918);
+}
+mat-button-toggle.mat-button-toggle-checked
+  .mat-button-toggle-label-content
+  .mat-button-toggle-ripple {
+  display: none;
+}
+mat-button-toggle:not(.mat-button-toggle-checked) {
+  background-color: none;
+  color: black;
+}
+mat-button-toggle:hover {
+  box-shadow: none;
+}
+.selection-menu {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  display: flex;
+}
+.mat-mdc-button:not(:disabled) {
+  flex: 1;
+  margin: 0 5px;
+  font-size: 1.1em;
+}

@@ -1,0 +1,47 @@
+<div class="grid">
+  <div *ngFor="let row of grid; let x = index" class="row">
+    <div
+      *ngFor="let cell of row; let y = index"
+      class="cell"
+      [class.wall]="cell.isWall"
+      [class.start]="cell.isStart"
+      [class.end]="cell.isEnd"
+      [class.visited]="cell.isVisited"
+      [class.visitedEnd]="cell.isVisitedEnd"
+      [class.border]="cell.isBorder"
+      [class.path]="cell.isPath"
+      [class.borderEnd]="cell.isBorderEnd"
+      (click)="onCellClick(x, y)"
+    ></div>
+  </div>
+</div>
+<div class="actions-menu">
+  <p *ngIf="stage == 0" class="instruction-text">Select a cell to add source</p>
+  <p *ngIf="stage == 1" class="instruction-text">
+    Select a cell to add destination
+  </p>
+  <p *ngIf="stage == 2" class="instruction-text">Select a cell to add a wall</p>
+  <p *ngIf="stage == 3" class="instruction-text">Searching path...</p>
+  <p *ngIf="stage == 4 && result" class="instruction-text">Found!</p>
+  <p *ngIf="stage == 4 && !result" class="instruction-text">Unreachable</p>
+  <div class="preparation-menu">
+    <button *ngIf="stage == 0" mat-button (click)="randomStart()">
+      Generate random source
+    </button>
+    <button *ngIf="stage == 1" mat-button (click)="randomEnd()">
+      Generate random destination
+    </button>
+    <button *ngIf="stage == 2" mat-button (click)="randomWalls(0.7)">
+      Generate random walls
+    </button>
+    <button
+      *ngIf="stage == 2"
+      mat-button
+      (click)="startAlgorithm()"
+      class="start-button purple"
+    >
+      Start simulation
+    </button>
+    <button mat-button (click)="resetCells()">Reset</button>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="app-container">
+    <h1 class="purple">Search Algorithm Demonstration</h1>
+    <div class="choose-algorithm-type">
+        <mat-button-toggle-group hideSingleSelectionIndicator hideMultipleSelectionIndicator class="choose-algorithm-type" value="uninformed" (change)="selectAlgorithmType($event)">
+            <mat-button-toggle class="algorithm-type" value="uninformed">Uninformed Algorithms</mat-button-toggle>
+            <mat-button-toggle class="algorithm-type" value="informed">Informed Algorithms</mat-button-toggle>
+        </mat-button-toggle-group>
+    </div>
+    <div *ngIf="!isInformed" class="selection-menu">
+        <mat-button-toggle-group hideSingleSelectionIndicator hideMultipleSelectionIndicator class="choose-algorithm-type" value="breadthFirst" (change)="selectAlgorithm($event)">
+            <mat-button-toggle class="algorithm-option" value="breadthFirst">Breadth-First Search</mat-button-toggle>
+            <mat-button-toggle class="algorithm-option" value="depthFirst">Depth-First Search</mat-button-toggle>
+            <mat-button-toggle class="algorithm-option" value="bidirectional">Bidirectional Search</mat-button-toggle>
+        </mat-button-toggle-group>
+    </div>
+    <div *ngIf="isInformed" class="selection-menu">
+        <mat-button-toggle-group hideSingleSelectionIndicator hideMultipleSelectionIndicator class="choose-algorithm-type" value="bestFirstGreedy" (change)="selectAlgorithm($event)">
+            <mat-button-toggle class="algorithm-option" value="bestFirstGreedy">Best-first greedy</mat-button-toggle>
+            <mat-button-toggle class="algorithm-option" value="aStar">A*</mat-button-toggle>
+            <mat-button-toggle class="algorithm-option" value="weightedAStar">Weighted A*</mat-button-toggle>
+        </mat-button-toggle-group>
+    </div>
+
+    <app-grid [algorithm]="selectedAlgorithm"></app-grid>
+</div>
+
