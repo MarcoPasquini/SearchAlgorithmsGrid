@@ -1,27 +1,25 @@
 # SearchAlgorithm
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.2.
+# 🔍 Search Algorithm Visualizer  
 
-## Development server
+An interactive Angular web application that visually demonstrates the functioning of various **informed** and **uninformed** search algorithms using a grid-based interface.  
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🚀 Features  
+- **Grid-Based Visualization** – Watch how different search algorithms traverse the grid.  
+- **Multiple Algorithms** – Supports both informed (heuristic-based) and uninformed search techniques.  
+- **Interactive UI** – Set start and goal positions, place obstacles, and customize settings.  
+- **Real-Time Execution** – Step-by-step animation of the search process.  
 
-## Code scaffolding
+## 🔎 Supported Algorithms  
+### **Uninformed Search Algorithms**  
+1. **Breadth-First Search (BFS)** – Explores all nodes at the present depth level before moving to the next.  
+2. **Depth-First Search (DFS)** – Explores as far as possible along each branch before backtracking.  
+3. **Bidirectional Search** – Runs two simultaneous searches, one from the start and one from the goal, to find a faster path.  
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### **Informed Search Algorithms**  
+1. **Greedy Best-First Search** – Prioritizes nodes that are closest to the goal using a heuristic.  
+2. **A\*** (A-Star) – Balances path cost and heuristic to find the shortest path efficiently.  
+3. **Weighted A\*** – A variant of A* that prioritizes speed over optimality by increasing heuristic influence.
+  
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
